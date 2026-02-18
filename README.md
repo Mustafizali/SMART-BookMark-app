@@ -37,7 +37,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
 - Add/Delete bookmarks
 - Real-time updates
 - Vercel ready
-=======
+
 📌 Smart Bookmark App
 
 A modern full-stack bookmark manager built with Next.js (App Router) and Supabase, featuring Google OAuth authentication, private user-based data isolation, and real-time synchronization across multiple tabs.
