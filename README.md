@@ -1,5 +1,16 @@
-<<<<<<< HEAD
-# Smart Bookmark App
+# 🔖 Smart Bookmark App
+
+🚀 Live Demo: https://smart-bookmark-app.vercel.app
+
+A modern real-time bookmark manager built using:
+
+- Next.js 14 (App Router)
+- Supabase (Auth + Database + Realtime)
+- Tailwind CSS
+- Vercel Deployment
+
+Features secure Google authentication, private user-based bookmarks using Row Level Security (RLS), and cross-tab realtime synchronization.
+
 
 ## Tech Stack
 - Next.js (App Router)
