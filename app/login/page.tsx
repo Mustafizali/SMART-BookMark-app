@@ -5,12 +5,12 @@ import { supabase } from '../../lib/supabaseClient'
 export default function Login() {
 
   const loginWithGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/`
-      }
-    })
+  await supabase.auth.signInWithOAuth({
+  provider: 'google',
+  options: {
+    redirectTo: `${window.location.origin}`
+  }
+})
   }
 
   return (
