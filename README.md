@@ -251,7 +251,7 @@ Implemented optimistic UI update.
 
 Mustafiz Ali
 B.Tech CSE
-Full-stack developer with experience in React, Node.js, Java, and Spring Boot.
+Full-stack developer with experience in Full Stack Development.
 
 📄 License
 
@@ -266,6 +266,108 @@ Technical depth
 Architecture understanding
 
 Security awareness
+
+
+🚀 Deployment Challenges & Solutions
+
+During deployment, several real-world production issues were encountered and resolved:
+
+1️⃣ Supabase Environment Variables Missing
+
+Issue:
+Build failed on Vercel with:
+
+Error: supabaseUrl is required
+
+
+Cause:
+Environment variables were configured locally (.env.local) but not added in Vercel.
+
+Solution:
+Added the following variables in Vercel → Project Settings → Environment Variables:
+
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+2️⃣ GitHub Push Failed (Large File Error)
+
+Issue:
+Push rejected with:
+
+File node_modules/... exceeds GitHub size limit (100MB)
+
+
+Cause:
+node_modules was accidentally committed.
+
+Solution:
+
+Added .gitignore
+
+Removed node_modules from tracking
+
+Reset git history
+
+Re-pushed clean repository
+
+3️⃣ OAuth Redirected to Localhost in Production
+
+Issue:
+After login on production site, user was redirected to:
+
+http://localhost:3000
+
+
+Cause:
+Supabase "Site URL" was still set to localhost.
+
+Solution:
+Updated Supabase → Authentication → URL Configuration:
+
+Site URL → Production domain
+
+Added both:
+
+localhost (development)
+
+vercel domain (production)
+
+4️⃣ Duplicate Realtime Entries in Development
+
+Issue:
+Bookmarks appeared twice in development.
+
+Cause:
+React Strict Mode caused double subscription to Supabase Realtime.
+
+Solution:
+
+Added duplicate ID check before state update
+
+Scoped realtime subscription properly
+
+5️⃣ Double Login Flow
+
+Issue:
+After login, login page appeared again.
+
+Cause:
+Session was not being checked properly before rendering login page.
+
+Solution:
+Implemented supabase.auth.getSession() check and auth state listener.
+
+🎯 Key Learnings
+
+Proper environment variable handling in production
+
+Importance of .gitignore
+
+OAuth redirect configuration
+
+Handling React Strict Mode behavior
+
+Production-safe realtime subscription patterns
 
 Problem-solving ability
 
