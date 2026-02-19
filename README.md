@@ -1,6 +1,6 @@
 # 🔖 Smart Bookmark App
 
-🚀 Live Demo: smartbookmarkapp-lilac.vercel.app
+🚀 Live Demo: https://smartbookmarkapp-lilac.vercel.app
 A modern real-time bookmark manager built using:
 
 - Next.js 14 (App Router)
